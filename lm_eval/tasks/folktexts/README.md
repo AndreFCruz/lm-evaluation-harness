@@ -6,7 +6,8 @@ Title: "Evaluating language models as risk scores"
 
 Abstract: 
 
-
+Current question-answering benchmarks predominantly focus on accuracy in realizable prediction tasks.
+Such benchmarks necessarily fail to evaluate LLMs' ability to quantify ground-truth outcome uncertainty. In this work, we focus on the use of LLMs as risk scores for unrealizable prediction tasks. We introduce folktexts, a software package to systematically generate risk scores using LLMs, and evaluate them against US Census data products. We find that zero-shot risk scores produced by multiple-choice question-answering have high predictive signal but are widely miscalibrated. Base models consistently overestimate outcome uncertainty, while instruction-tuned models underestimate uncertainty and produce over-confident risk scores. In fact, instruction-tuning polarizes answer distribution regardless of true underlying data uncertainty, revealing LLMs' general inability to express aleatoric data uncertainty.
 
 Homepage: [https://github.com/socialfoundations/folktexts](https://github.com/socialfoundations/folktexts)
 
