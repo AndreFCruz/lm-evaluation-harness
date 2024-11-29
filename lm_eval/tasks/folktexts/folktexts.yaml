@@ -1,0 +1,26 @@
+dataset_path: acruz/folktexts
+dataset_name: ACSIncome
+
+training_split: train
+validation_split: validation
+test_split: test
+fewshot_split: train
+
+doc_to_text: "{{instruction}}\n{{description}}\n{{choice_question_prompt}}"
+doc_to_target: "{{answer_key}}"
+
+metric_list:
+  - metric: accuracy
+    aggregation: mean
+    higher_is_better: true
+  - metric: perplexity
+    aggregation: mean
+    higher_is_better: false
+  - metric: !function utils.calculate_ece
+    aggregation: mean
+    higher_is_better: false
+
+task: folktexts
+
+metadata:
+  version: 0.0
